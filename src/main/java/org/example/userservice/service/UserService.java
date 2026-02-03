@@ -4,12 +4,13 @@ import org.example.userservice.model.User;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface UserService {
-    Long createUser(String name, String email, Integer age);
-    Long updateInfo(Long id, String name, String email, Integer age);
-    Optional<User> findById(Long id);
+    UUID createUser(String name, String email, Integer age);
+    UUID updateInfo(String id, String name, String email, Integer age);
+    Optional<User> findById(String id);
     Optional<User> findByEmail(String email);
-    boolean deleteUser(Long id);
+    boolean deleteUser(String id);
     List<User> findAll();
 }

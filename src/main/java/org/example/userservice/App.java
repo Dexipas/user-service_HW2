@@ -1,12 +1,9 @@
 package org.example.userservice;
-
-import org.example.userservice.config.HibernateUtil;
 import org.example.userservice.console.ConsoleUI;
 import org.example.userservice.dao.UserDAO;
 import org.example.userservice.dao.UserDAOImpl;
 import org.example.userservice.service.UserService;
 import org.example.userservice.service.UserServiceImp;
-import org.hibernate.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

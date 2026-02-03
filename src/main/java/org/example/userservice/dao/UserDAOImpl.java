@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public class UserDAOImpl implements UserDAO {
 
@@ -26,7 +27,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User save(User user) {
-        log.debug("Сохранение пользователя в БД: {}", user.getId());
+        log.debug("Сохранение пользователя в БД: {}", user.getEmail());
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
             transaction = session.beginTransaction();
@@ -75,7 +76,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public Optional<User> findById(Long id) {
+    public Optional<User> findById(UUID id) {
         log.debug("Поиск пользователя в БД по id: {}", id);
         User user = null;
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -152,10 +153,14 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean existsById(Long id) {
+    public boolean existsById(UUID id) {
         log.debug("Поиск присутствия в БД пользователя по id: {}", id);
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {
-            if(session.find(User.class, id) != null) {
+            Long count = session.createQuery("select count(*) from User where id = :id", Long.class)
+                    .setParameter("id",id)
+                    .getSingleResult();
+            boolean exists = count > 0;
+            if(exists) {
                 log.debug("Пользователь с id {} найден.", id);
                 return true;
             }
@@ -174,10 +179,11 @@ public class UserDAOImpl implements UserDAO {
     public boolean existsByEmail(String email) {
         log.debug("Поиск присутствия в БД пользователя по email: {}", email);
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {
-            User user = session.createSelectionQuery("from User where email = :email", User.class)
+            Long count = session.createSelectionQuery("select count(*) from User where email = :email", Long.class)
                     .setParameter("email", email)
-                    .getSingleResultOrNull();
-            if(user != null) {
+                    .getSingleResult();
+            boolean exists = count > 0;
+            if(exists) {
                 log.debug("Пользователь в БД с email {} найден.", email);
                 return true;
             }

@@ -727,3 +727,1898 @@ FROM
 2026-02-01 05:47:48 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
 2026-02-01 05:47:52 INFO  o.e.u.c.ConsoleUI - ConsoleUI завершен.
 2026-02-01 05:47:52 INFO  o.e.userservice.App - Приложение завершено.
+2026-02-03 16:28:00 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 16:28:00 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 16:28:00 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 16:28:00 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 16:28:00 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 16:28:18 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=Ded@ded.ru
+2026-02-03 16:28:18 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 16:28:18 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 16:28:19 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 16:28:19 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 16:28:19 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 16:28:19 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 16:28:19 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 16:28:20 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 16:52:36 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-03 17:04:08 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 17:04:08 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 17:04:08 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 17:04:08 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 17:04:08 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 17:04:58 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 17:04:58 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 17:04:58 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 17:04:58 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 17:04:58 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 17:05:08 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по email=dede@ded.rt
+2026-02-03 17:05:08 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 17:05:09 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 17:05:09 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 17:05:10 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 17:05:10 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 17:05:10 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 17:05:10 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 17:05:10 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 17:20:12 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 17:20:12 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 17:20:12 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 17:20:12 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 17:20:12 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 17:20:41 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ru
+2026-02-03 17:20:41 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 17:20:41 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 17:20:41 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 17:20:42 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 17:20:42 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 17:20:42 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 17:20:42 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 17:20:43 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 17:29:20 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 17:29:20 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 17:29:20 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 17:29:20 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 17:29:20 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 17:29:38 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ya.ru
+2026-02-03 17:29:38 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 17:29:38 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 17:29:38 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 17:29:39 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 17:29:39 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 17:29:39 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 17:29:39 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 17:29:40 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 17:29:43 INFO  o.e.u.c.ConsoleUI - ConsoleUI завершен.
+2026-02-03 17:29:43 INFO  o.e.userservice.App - Приложение завершено.
+2026-02-03 17:32:17 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 17:32:17 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 17:32:17 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 17:32:17 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 17:32:17 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 17:38:40 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 17:38:40 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 17:38:41 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 17:38:41 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 17:38:41 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 17:38:41 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 17:38:41 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 17:38:41 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 17:51:45 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 17:51:45 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 17:51:45 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 17:51:46 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 17:51:46 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 17:51:46 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 17:51:46 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 17:51:46 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 17:51:46 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=3dfdef4c-3648-421a-a441-78c8a9bb2812, email=ded@mail.ru
+2026-02-03 17:52:15 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 17:52:15 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 17:52:16 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 17:52:16 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 17:52:16 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 17:52:16 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 17:52:17 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 17:52:17 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 17:52:17 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=83bd9afd-8cc2-4990-a83c-3843b2e5a627, email=83bd9afd-8cc2-4990-a83c-3843b2e5a627
+2026-02-03 18:16:10 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 18:16:10 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 18:16:10 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 18:16:10 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 18:16:10 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 18:16:22 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ru
+2026-02-03 18:16:22 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 18:16:22 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 18:16:22 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 18:16:23 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 18:16:23 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 18:16:23 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 18:16:23 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 18:16:24 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 18:16:24 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 18:16:24 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=b918e7da-f331-4404-a983-47493ee7c587, email=b918e7da-f331-4404-a983-47493ee7c587
+2026-02-03 18:16:24 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=b918e7da-f331-4404-a983-47493ee7c587, email=ded@ded.ru
+2026-02-03 18:19:26 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=0
+2026-02-03 18:36:23 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 18:36:23 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 18:36:23 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 18:36:23 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 18:36:23 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 18:36:35 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ru
+2026-02-03 18:36:35 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 18:36:35 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 18:36:36 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 18:36:36 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 18:36:37 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 18:36:37 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 18:36:37 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 18:36:37 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 18:36:37 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 18:36:37 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=3ad968bd-6410-4f39-8447-e03df25285a4, email=ded@ded.ru
+2026-02-03 18:36:37 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=3ad968bd-6410-4f39-8447-e03df25285a4, email=ded@ded.ru
+2026-02-03 18:41:08 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 18:41:08 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 18:41:08 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 18:41:08 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 18:41:08 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 18:44:35 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 18:44:35 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 18:44:35 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 18:44:35 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 18:44:35 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 18:44:48 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ru
+2026-02-03 18:44:48 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 18:44:48 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 18:44:48 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 18:44:49 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 18:44:49 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 18:44:49 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 18:44:49 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 18:44:49 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 18:44:49 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 18:44:49 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=20eefd47-1303-423f-80e6-a4492be1f117, email=ded@ded.ru
+2026-02-03 18:44:49 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=20eefd47-1303-423f-80e6-a4492be1f117, email=ded@ded.ru
+2026-02-03 18:45:00 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-03 18:45:14 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ara@ar.ru
+2026-02-03 18:45:14 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 18:45:14 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 18:45:14 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=3444987e-b73b-473f-8d30-fd12e9a7dc24, email=ara@ar.ru
+2026-02-03 18:45:14 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=3444987e-b73b-473f-8d30-fd12e9a7dc24, email=ara@ar.ru
+2026-02-03 18:45:32 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=3444987e-b73b-473f-8d30-fd12e9a7dc24
+2026-02-03 18:45:32 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 18:45:32 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 18:45:58 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ew
+2026-02-03 18:46:18 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ara@ar.ru
+2026-02-03 18:46:32 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ara@ar.ru
+2026-02-03 18:46:32 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 18:47:01 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по email=ara@ar.ru
+2026-02-03 18:47:01 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 18:48:07 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=ara@ar.ru
+2026-02-03 18:48:07 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 18:48:07 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 18:48:07 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 18:48:07 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 18:48:07 WARN  o.h.orm.jdbc.error - HHH000247: ErrorCode: 0, SQLState: 23505
+2026-02-03 18:48:07 WARN  o.h.orm.jdbc.error - ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ara@ar.ru) already exists.
+2026-02-03 18:48:07 ERROR o.e.u.d.UserDAOImpl - Нарушение целостности данных при обращении к БД: could not execute statement [ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ara@ar.ru) already exists.] [/* insert for org.example.userservice.model.User */insert into users (age,created_at,email,name,id) values (?,?,?,?,?)]
+org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ara@ar.ru) already exists.] [/* insert for org.example.userservice.model.User */insert into users (age,created_at,email,name,id) values (?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:184)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:66)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:180)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:120)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:93)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:381)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1451)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:482)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2078)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2000)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:410)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:166)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:248)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.example.userservice.dao.UserDAOImpl.update(UserDAOImpl.java:60)
+	at org.example.userservice.service.UserServiceImp.updateInfo(UserServiceImp.java:94)
+	at org.example.userservice.console.ConsoleUI.changeUserData(ConsoleUI.java:126)
+	at org.example.userservice.console.ConsoleUI.show(ConsoleUI.java:68)
+	at org.example.userservice.App.main(App.java:29)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ara@ar.ru) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2531)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:429)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:526)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:436)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:181)
+	... 27 common frames omitted
+2026-02-03 21:10:30 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 21:10:30 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 21:10:30 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 21:10:30 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 21:10:30 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 21:10:49 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ded
+2026-02-03 21:10:49 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 21:10:49 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 21:10:49 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 21:10:50 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 21:10:50 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 21:10:50 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 21:10:50 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 21:10:50 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 21:10:50 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 21:10:50 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=c84f954a-ff1b-4e5e-b992-5cd50deb1785, email=ded@ded.ded
+2026-02-03 21:10:50 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=c84f954a-ff1b-4e5e-b992-5cd50deb1785, email=ded@ded.ded
+2026-02-03 21:37:52 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 21:37:52 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 21:37:52 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 21:37:52 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 21:37:52 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 21:38:55 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ded
+2026-02-03 21:38:55 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 21:38:56 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 21:38:56 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 21:38:56 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 21:38:56 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 21:38:56 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 21:38:57 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 21:38:57 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 21:38:57 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 21:38:57 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=c8185cdc-26f7-4c30-9fab-682f1472f056, email=ded@ded.ded
+2026-02-03 21:38:57 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=c8185cdc-26f7-4c30-9fab-682f1472f056, email=ded@ded.ded
+2026-02-03 21:39:21 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=asd@asd.re
+2026-02-03 21:39:52 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=[c8185cdc-26f7-4c30-9fab-682f1472f056]
+2026-02-03 21:40:02 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=c8185cdc-26f7-4c30-9fab-682f1472f056
+2026-02-03 21:40:02 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:40:02 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 21:40:29 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=ded@ded.ded
+2026-02-03 21:40:29 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:40:29 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 21:40:29 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 21:40:29 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 21:40:29 WARN  o.h.orm.jdbc.error - HHH000247: ErrorCode: 0, SQLState: 23505
+2026-02-03 21:40:29 WARN  o.h.orm.jdbc.error - ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.
+2026-02-03 21:40:29 ERROR o.e.u.d.UserDAOImpl - Нарушение целостности данных при обращении к БД: could not execute statement [ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.] [/* insert for org.example.userservice.model.User */insert into users (age,created_at,email,name,id) values (?,?,?,?,?)]
+org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.] [/* insert for org.example.userservice.model.User */insert into users (age,created_at,email,name,id) values (?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:184)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:66)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:180)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:120)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:93)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:381)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1451)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:482)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2078)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2000)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:410)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:166)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:248)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.example.userservice.dao.UserDAOImpl.update(UserDAOImpl.java:60)
+	at org.example.userservice.service.UserServiceImp.updateInfo(UserServiceImp.java:102)
+	at org.example.userservice.console.ConsoleUI.changeUserData(ConsoleUI.java:126)
+	at org.example.userservice.console.ConsoleUI.show(ConsoleUI.java:68)
+	at org.example.userservice.App.main(App.java:29)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2531)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:429)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:526)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:436)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:181)
+	... 27 common frames omitted
+2026-02-03 21:44:19 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 21:44:19 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 21:44:19 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 21:44:19 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 21:44:19 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 21:44:28 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ded
+2026-02-03 21:44:48 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=w
+2026-02-03 21:45:00 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ded
+2026-02-03 21:45:01 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 21:45:01 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 21:45:01 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 21:45:02 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 21:45:02 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 21:45:02 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 21:45:02 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 21:45:02 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 21:45:02 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 21:45:02 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=957a9a6d-084e-42f7-addd-e56b271cfe64, email=ded@ded.ded
+2026-02-03 21:45:02 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=957a9a6d-084e-42f7-addd-e56b271cfe64, email=ded@ded.ded
+2026-02-03 21:45:26 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=dedok@ded.ded
+2026-02-03 21:45:26 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:45:26 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 21:45:26 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 21:45:26 INFO  o.e.u.d.UserDAOImpl - Пользователь изменен в БД: ID=null, email=dedok@ded.ded
+2026-02-03 21:45:26 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=null, email=dedok@ded.ded
+2026-02-03 21:45:32 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-03 21:55:07 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 21:55:07 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 21:55:07 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 21:55:07 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 21:55:07 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 21:55:25 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 21:55:25 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 21:55:25 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 21:55:25 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 21:55:25 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 21:55:48 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=dedok@mail.ru
+2026-02-03 21:55:48 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 21:55:49 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 21:55:49 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 21:55:50 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 21:55:50 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 21:55:50 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 21:55:50 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 21:55:50 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 21:55:50 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 21:55:50 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=5da09056-99f5-43d4-9637-c44e47f227e6, email=dedok@mail.ru
+2026-02-03 21:55:50 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=5da09056-99f5-43d4-9637-c44e47f227e6, email=dedok@mail.ru
+2026-02-03 21:55:59 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-03 21:56:25 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=Ded@ded.ru
+2026-02-03 21:56:25 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:56:25 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 21:57:25 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=ded@ded.ded
+2026-02-03 21:57:25 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:57:25 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 21:57:38 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=5da09056-99f5-43d4-9637-c44e47f227e6
+2026-02-03 21:57:38 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:57:38 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 21:57:38 DEBUG org.hibernate.SQL - 
+    /* delete 
+    for
+        org.example.userservice.model.User */delete 
+    from
+        users 
+    where
+        id=?
+2026-02-03 21:57:38 INFO  o.e.u.d.UserDAOImpl - Пользователь удален из БД: ID=5da09056-99f5-43d4-9637-c44e47f227e6, email=dedok@mail.ru
+2026-02-03 21:57:38 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:57:38 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=5da09056-99f5-43d4-9637-c44e47f227e6
+2026-02-03 21:57:45 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=5da09056-99f5-43d4-9637-c44e47f227e6
+2026-02-03 21:57:45 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:57:58 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ded
+2026-02-03 21:57:58 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 21:57:58 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 21:57:58 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=85c13130-8cf9-4e2c-b79e-4e5a57b25d87, email=ded@ded.ded
+2026-02-03 21:57:58 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=85c13130-8cf9-4e2c-b79e-4e5a57b25d87, email=ded@ded.ded
+2026-02-03 21:58:16 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=ded@ded.ded
+2026-02-03 21:58:16 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:58:25 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-03 21:58:41 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=ded@ded.ry
+2026-02-03 21:58:41 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 21:58:41 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 22:05:43 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 22:05:43 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 22:05:44 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 22:05:44 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 22:05:44 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 22:05:44 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 22:05:45 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 22:05:45 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 22:05:45 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=74024097-87e2-49b7-8b6b-9a7a4ddfa9fb, email=ded@ded.ded
+2026-02-03 22:05:45 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 22:05:45 DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        org.example.userservice.model.User */update users 
+    set
+        age=?,
+        email=?,
+        name=? 
+    where
+        id=?
+2026-02-03 22:05:45 INFO  o.e.u.d.UserDAOImpl - Пользователь изменен в БД: ID=74024097-87e2-49b7-8b6b-9a7a4ddfa9fb, email=ded@ded.ded
+2026-02-03 22:06:54 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 22:06:55 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 22:06:55 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 22:06:56 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 22:06:56 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 22:06:56 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 22:06:56 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 22:06:56 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 22:06:56 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=08dbd7ac-14e2-4e62-831a-0c69e33a5874, email=ded@ded.ded
+2026-02-03 22:06:56 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 22:06:56 DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        org.example.userservice.model.User */update users 
+    set
+        age=?,
+        email=?,
+        name=? 
+    where
+        id=?
+2026-02-03 22:06:56 INFO  o.e.u.d.UserDAOImpl - Пользователь изменен в БД: ID=08dbd7ac-14e2-4e62-831a-0c69e33a5874, email=dedok@ded.ru
+2026-02-03 22:08:57 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 22:08:57 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 22:08:57 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 22:08:58 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 22:08:58 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 22:08:58 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 22:08:58 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 22:08:58 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 22:08:58 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=a06f8002-23a7-469e-a73b-f0e301c48aa8, email=ded@ded.ded
+2026-02-03 22:08:58 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 22:08:58 DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        org.example.userservice.model.User */update users 
+    set
+        age=?,
+        email=?,
+        name=? 
+    where
+        id=?
+2026-02-03 22:08:58 INFO  o.e.u.d.UserDAOImpl - Пользователь изменен в БД: ID=a06f8002-23a7-469e-a73b-f0e301c48aa8, email=dedok@ded.ru
+2026-02-03 22:10:04 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 22:10:04 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 22:10:04 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 22:10:05 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 22:10:05 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 22:10:05 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 22:10:05 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 22:10:05 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 22:10:05 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=e11e1812-c3d3-42e5-a39a-ba8fb8882426, email=ded@ded.ded
+2026-02-03 22:10:05 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 22:10:05 DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        org.example.userservice.model.User */update users 
+    set
+        age=?,
+        email=?,
+        name=? 
+    where
+        id=?
+2026-02-03 22:10:05 INFO  o.e.u.d.UserDAOImpl - Пользователь изменен в БД: ID=e11e1812-c3d3-42e5-a39a-ba8fb8882426, email=ded@ded.ded
+2026-02-03 22:19:08 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 22:19:08 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 22:19:08 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 22:19:08 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 22:19:08 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 22:19:16 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ded
+2026-02-03 22:19:16 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 22:19:17 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 22:19:17 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 22:19:18 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 22:19:18 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 22:19:18 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 22:19:18 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 22:19:18 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 22:19:18 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 22:19:18 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=b5b3afa4-8a1a-4cdd-a876-03672a35bf93, email=ded@ded.ded
+2026-02-03 22:19:18 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=b5b3afa4-8a1a-4cdd-a876-03672a35bf93, email=ded@ded.ded
+2026-02-03 22:19:49 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=ded@ded.ded
+2026-02-03 22:19:49 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 22:19:49 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 22:19:49 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 22:19:49 WARN  o.h.orm.jdbc.error - HHH000247: ErrorCode: 0, SQLState: 23505
+2026-02-03 22:19:49 WARN  o.h.orm.jdbc.error - ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.
+2026-02-03 22:19:49 ERROR o.e.u.d.UserDAOImpl - Нарушение целостности данных при обращении к БД: could not execute statement [ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.] [/* insert for org.example.userservice.model.User */insert into users (age,created_at,email,name,id) values (?,?,?,?,?)]
+org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.] [/* insert for org.example.userservice.model.User */insert into users (age,created_at,email,name,id) values (?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:73)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:184)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:66)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:180)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:120)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:93)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:108)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:381)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1451)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:482)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2078)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2000)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:410)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:166)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:248)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89)
+	at org.example.userservice.dao.UserDAOImpl.update(UserDAOImpl.java:76)
+	at org.example.userservice.service.UserServiceImp.updateInfo(UserServiceImp.java:103)
+	at org.example.userservice.console.ConsoleUI.changeUserData(ConsoleUI.java:126)
+	at org.example.userservice.console.ConsoleUI.show(ConsoleUI.java:68)
+	at org.example.userservice.App.main(App.java:29)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_email_key"
+  Подробности: Key (email)=(ded@ded.ded) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2531)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:429)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:526)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:436)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:181)
+	... 27 common frames omitted
+2026-02-03 22:25:18 INFO  o.e.userservice.App - Приложение запущено.
+2026-02-03 22:25:18 INFO  o.e.userservice.App - Запуск UserDAO
+2026-02-03 22:25:18 INFO  o.e.userservice.App - Запуск UserService
+2026-02-03 22:25:18 INFO  o.e.userservice.App - Запуск ConsoleUI
+2026-02-03 22:25:18 INFO  o.e.u.c.ConsoleUI - ConsoleUI запущен.
+2026-02-03 22:25:31 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=ded@ded.ded
+2026-02-03 22:25:31 INFO  o.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-02-03 22:25:32 WARN  o.h.o.c.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-03 22:25:32 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/users_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: users_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-03 22:25:33 INFO  o.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 22:25:33 DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2026-02-03 22:25:33 DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-02-03 22:25:33 DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer,
+        created_at timestamp(6),
+        id uuid not null,
+        name varchar(50) not null,
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+2026-02-03 22:25:33 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        email = :email */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-02-03 22:25:33 DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        org.example.userservice.model.User
+        */insert 
+    into
+        users (age, created_at, email, name, id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-02-03 22:25:33 INFO  o.e.u.d.UserDAOImpl - Пользователь сохранен в БД: ID=95af941f-9363-46ba-bd18-5f8be82115cd, email=ded@ded.ded
+2026-02-03 22:25:33 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=95af941f-9363-46ba-bd18-5f8be82115cd, email=ded@ded.ded
+2026-02-03 22:25:35 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-03 22:26:19 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=ded@ded.ded
+2026-02-03 22:26:19 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 22:26:19 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 22:26:19 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 22:26:19 DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        org.example.userservice.model.User */update users 
+    set
+        age=?,
+        email=?,
+        name=? 
+    where
+        id=?
+2026-02-03 22:26:19 INFO  o.e.u.d.UserDAOImpl - Пользователь изменен в БД: ID=95af941f-9363-46ba-bd18-5f8be82115cd, email=ded@ded.ded
+2026-02-03 22:26:19 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=95af941f-9363-46ba-bd18-5f8be82115cd, email=ded@ded.ded
+2026-02-03 22:26:32 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-03 22:26:58 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=Dedok@ded.ru
+2026-02-03 22:26:58 DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User 
+    where
+        id = :id */ select
+            count(*) 
+        from
+            users u1_0 
+        where
+            u1_0.id=?
+2026-02-03 22:26:58 DEBUG org.hibernate.SQL - 
+    /* 
+from
+    User 
+where
+    email = :email */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-03 22:26:58 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-03 22:26:58 DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        org.example.userservice.model.User */update users 
+    set
+        age=?,
+        email=?,
+        name=? 
+    where
+        id=?
+2026-02-03 22:26:58 INFO  o.e.u.d.UserDAOImpl - Пользователь изменен в БД: ID=95af941f-9363-46ba-bd18-5f8be82115cd, email=dedok@ded.ru
+2026-02-03 22:26:58 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=95af941f-9363-46ba-bd18-5f8be82115cd, email=Dedok@ded.ru
+2026-02-03 22:27:01 DEBUG org.hibernate.SQL - 
+    /* 
+FROM
+    User */ select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0

@@ -3,10 +3,9 @@ package org.example.userservice.console;
 import org.example.userservice.model.User;
 import org.example.userservice.service.UserService;
 import org.example.userservice.exception.*;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+
+import java.util.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,10 +27,10 @@ public class ConsoleUI {
     private static final int EXIT_NUM = 7;
 
     private Scanner scanner = new Scanner(System.in);
-    private Long id = 0L;
-    private String name = "";
-    private String email = "";
-    private Integer age = 0;
+    private String id;
+    private String name;
+    private String email;
+    private Integer age;
 
     public ConsoleUI(UserService userService) {
         this.userService = userService;
@@ -93,8 +92,8 @@ public class ConsoleUI {
             scanner.next();
         }
         try {
-            Long userId = userService.createUser(name,email,age);
-            System.out.printf("Пользователь с id %s добавлен.", userId);
+            UUID userId = userService.createUser(name,email,age);
+            System.out.printf("Пользователь с id [%s] добавлен.", userId);
         } catch (InvalidNameException e){
             System.out.printf("%s %s", ERROR_NAME_MESSAGE, e);
         } catch (InvalidEmailException e) {
@@ -112,7 +111,7 @@ public class ConsoleUI {
         System.out.println("__Изменение данных пользователя__");
         try {
             System.out.print(ADD_ID_MESSAGE);
-            id = (Long) scanner.nextLong();
+            id = scanner.next();
             System.out.print(ADD_USER_MESSAGE);
             name = (String) scanner.next();
             System.out.print(ADD_EMAIL_MESSAGE);
@@ -124,8 +123,8 @@ public class ConsoleUI {
             scanner.next();
         }
         try {
-            Long userId = userService.updateInfo(id,name,email,age);
-            System.out.printf("Пользователь с id %s изменен.", userId);
+            UUID userId = userService.updateInfo(id,name,email,age);
+            System.out.printf("Пользователь с id [%s] изменен.", userId);
         } catch (UserNotFoundException e){
             System.out.printf("%s %s", ERROR_ID_MESSAGE, e);
         } catch (InvalidNameException e){
@@ -146,7 +145,7 @@ public class ConsoleUI {
         System.out.println("__Удаление пользователя__");
         try {
             System.out.print(ADD_ID_MESSAGE);
-            id = (Long) scanner.nextLong();
+            id = scanner.next();
         } catch (InputMismatchException e) {
             System.out.printf("%s %s", ERROR_INPUT_MESSAGE, e);
             scanner.next();
@@ -154,9 +153,9 @@ public class ConsoleUI {
 
         try {
             if (userService.deleteUser(id))
-                System.out.printf("Пользователь с id %s удален.", id);
+                System.out.printf("Пользователь с id [%s] удален.", id);
             else
-                System.out.printf("Не удалось удалить пользователя с id %s.", id);
+                System.out.printf("Не удалось удалить пользователя с id [%s].", id);
         } catch (UserNotFoundException e){
             System.out.printf("%s %s", ERROR_ID_MESSAGE, e);
         }
@@ -184,9 +183,9 @@ public class ConsoleUI {
         try {
             Optional<User> user = userService.findByEmail(email);
             if (user.isPresent())
-                System.out.printf("Пользователь с email %s найден. \n %s", email,user.get().toString());
+                System.out.printf("Пользователь с email [%s] найден. \n %s", email,user.get());
             else
-                System.out.printf("Не удалось найти пользователя с email %s.", email);
+                System.out.printf("Не удалось найти пользователя с email [%s].", email);
         } catch (EmailEmptyOrNullException e){
             System.out.printf("%s %s", ERROR_EMAIL_MESSAGE, e);
         } catch (Exception e) {
@@ -198,7 +197,7 @@ public class ConsoleUI {
         System.out.println("__Поиск пользователя по id__");
         try {
             System.out.print(ADD_ID_MESSAGE);
-            id = (Long) scanner.nextLong();
+            id = scanner.next();
         } catch (InputMismatchException e) {
             System.out.printf("%s %s", ERROR_INPUT_MESSAGE, e);
             scanner.next();
@@ -207,9 +206,9 @@ public class ConsoleUI {
         try {
             Optional<User> user = userService.findById(id);
             if (user.isPresent())
-                System.out.printf("Пользователь с id %s найден. \n %s", id,user.get().toString());
+                System.out.printf("Пользователь с id [%s] найден. \n %s", id,user.get());
             else
-                System.out.printf("Не удалось найти пользователя с id %s.", id);
+                System.out.printf("Не удалось найти пользователя с id [%s].", id);
         } catch (UserNotFoundException e){
             System.out.printf("%s %s", ERROR_ID_MESSAGE, e);
         } catch (Exception e){

@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public class UserServiceImp implements UserService {
     private static final Logger log = LoggerFactory.getLogger(UserServiceImp.class);
@@ -26,7 +27,7 @@ public class UserServiceImp implements UserService {
         String regexEng = "^[A-Z][a-z]+$";
         String regexRu = "^[А-Я][а-я]+$";
 
-        if(name.matches(regexRu) == name.matches(regexEng)) {
+        if(!name.matches(regexRu) && !name.matches(regexEng)) {
             throw new InvalidNameException(name);
         }
     }
@@ -59,46 +60,57 @@ public class UserServiceImp implements UserService {
         }
     }
 
-    private void validateId(Long id){
+    private void validateId(String id){
         if(id == null) {
-            throw new IdNullException(id);
+            throw new IdNullException(null);
         }
-        if(!userDAO.existsById(id)){
-            throw new UserNotFoundException(id);
+
+        String regexId = "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$";
+        if(!id.matches(regexId)){
+            throw new InvalidIdException(id);
+        }
+
+        UUID uuid = UUID.fromString(id);
+        if(!userDAO.existsById(uuid)){
+            throw new UserNotFoundException(uuid);
         }
     }
 
     @Override
-    public Long createUser(String name, String email, Integer age) {
+    public UUID createUser(String name, String email, Integer age) {
         log.info("Начало создания пользователя: email={}", email);
         validateName(name);
         validateEmail(email);
         duplicateEmail(email);
         validateAge(age);
-        User user = userDAO.save(new User(null, name, email.toLowerCase(), age, null));
+        User user = userDAO.save(new User(name, email.toLowerCase(), age));
         log.info("Пользователь создан успешно: ID={}, email={}", user.getId(), email);
         return user.getId();
     }
 
     @Override
-    public Long updateInfo(Long id, String name, String email, Integer age) {
+    public UUID updateInfo(String id, String name, String email, Integer age) {
         log.info("Начало изменения пользователя: email={}", email);
         validateId(id);
+        UUID uuid = UUID.fromString(id);
         validateName(name);
         validateEmail(email);
-        if(!id.equals(userDAO.findByEmail(email).get().getId()))
-            duplicateEmail(email);
+        Optional<User> userChecked = userDAO.findByEmail(email);
+        if(userChecked.isPresent())
+            if(!uuid.equals(userChecked.get().getId()))
+                duplicateEmail(email);
         validateAge(age);
-        User user = userDAO.update(new User(id, name, email.toLowerCase(), age, null));
+        User user = userDAO.update(new User(uuid, name, email.toLowerCase(), age));
         log.info("Пользователь успешно изменен: ID={}, email={}", user.getId(), email);
         return user.getId();
     }
 
     @Override
-    public Optional<User> findById(Long id) {
+    public Optional<User> findById(String id) {
         log.info("Начало поиска пользователя по id={}", id);
         validateId(id);
-        return userDAO.findById(id);
+        UUID uuid = UUID.fromString(id);
+        return userDAO.findById(uuid);
     }
 
     @Override
@@ -109,11 +121,13 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public boolean deleteUser(Long id) {
+    public boolean deleteUser(String id) {
         log.info("Начало удаления пользователя: id={}", id);
         validateId(id);
-        userDAO.delete(userDAO.findById(id).get());
-        boolean delResult = !userDAO.existsById(id);
+        UUID uuid = UUID.fromString(id);
+        Optional<User> user = userDAO.findById(uuid);
+        user.ifPresent(userDAO::delete);
+        boolean delResult = !userDAO.existsById(uuid);
         if(delResult)
             log.info("Пользователь успешно удален: id={}", id);
         else
