@@ -1,4 +1,5 @@
 package org.example.userservice;
+import org.example.userservice.config.HibernateUtil;
 import org.example.userservice.console.ConsoleUI;
 import org.example.userservice.dao.UserDAO;
 import org.example.userservice.dao.UserDAOImpl;
@@ -18,7 +19,7 @@ public class App
     {
         log.info("Приложение запущено.");
         log.info("Запуск UserDAO");
-        UserDAO userDAO = new UserDAOImpl();
+        UserDAO userDAO = new UserDAOImpl(HibernateUtil.getSessionFactory());
         log.info("Запуск UserService");
         UserService userService = new UserServiceImp(userDAO);
         log.info("Запуск ConsoleUI");

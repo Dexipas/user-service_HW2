@@ -55,7 +55,7 @@ public class UserServiceImp implements UserService {
         if(age == null) {
             throw new AgeNullException(age);
         }
-        if((age < 1) || (age > 100)) { // заменить литералы на константы?
+        if((age < 1) || (age > 100)) {
             throw new InvalidAgeException(age);
         }
     }
@@ -70,10 +70,6 @@ public class UserServiceImp implements UserService {
             throw new InvalidIdException(id);
         }
 
-        UUID uuid = UUID.fromString(id);
-        if(!userDAO.existsById(uuid)){
-            throw new UserNotFoundException(uuid);
-        }
     }
 
     @Override
@@ -93,6 +89,9 @@ public class UserServiceImp implements UserService {
         log.info("Начало изменения пользователя: email={}", email);
         validateId(id);
         UUID uuid = UUID.fromString(id);
+        if(!userDAO.existsById(uuid)){
+            throw new UserNotFoundException(uuid);
+        }
         validateName(name);
         validateEmail(email);
         Optional<User> userChecked = userDAO.findByEmail(email);
@@ -125,6 +124,9 @@ public class UserServiceImp implements UserService {
         log.info("Начало удаления пользователя: id={}", id);
         validateId(id);
         UUID uuid = UUID.fromString(id);
+        if(!userDAO.existsById(uuid)){
+            throw new UserNotFoundException(uuid);
+        }
         Optional<User> user = userDAO.findById(uuid);
         user.ifPresent(userDAO::delete);
         boolean delResult = !userDAO.existsById(uuid);

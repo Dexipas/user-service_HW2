@@ -6,6 +6,7 @@ import org.example.userservice.exception.DataAccessException;
 import org.example.userservice.model.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.exception.JDBCConnectionException;
@@ -23,13 +24,17 @@ public class UserDAOImpl implements UserDAO {
     private static final String ERROR_INTEGRITY_DB = "Нарушение целостности данных при обращении к БД";
     private static final String ERROR_CONNECTION_DB = "Ошибка подключения к БД";
     private static final String ERROR_WORK_DB = "Ошибка работы БД";
+    private final SessionFactory sessionFactory;
 
+    public UserDAOImpl(SessionFactory sessionFactory){
+        this.sessionFactory = sessionFactory;
+    }
 
     @Override
     public User save(User user) {
         log.debug("Сохранение пользователя в БД: {}", user.getEmail());
         Transaction transaction = null;
-        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+        try(Session session = sessionFactory.openSession()){
             transaction = session.beginTransaction();
             session.persist(user);
             transaction.commit();
@@ -54,7 +59,7 @@ public class UserDAOImpl implements UserDAO {
     public User update(User user) {
         log.debug("Обновление данных пользователя в БД: {}", user.getId());
         Transaction transaction = null;
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             session.merge(user);
             transaction.commit();
@@ -79,7 +84,7 @@ public class UserDAOImpl implements UserDAO {
     public Optional<User> findById(UUID id) {
         log.debug("Поиск пользователя в БД по id: {}", id);
         User user = null;
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = sessionFactory.openSession()) {
             user = session.find(User.class, id);
         } catch (JDBCConnectionException e) {
             log.error("{}: {}", ERROR_CONNECTION_DB, e.getMessage(), e);
@@ -96,7 +101,7 @@ public class UserDAOImpl implements UserDAO {
     public Optional<User> findByEmail(String email) {
         log.debug("Поиск пользователя в БД по email: {}", email);
         User user = null;
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = sessionFactory.openSession()) {
             user = session.createSelectionQuery("from User where email = :email", User.class)
                     .setParameter("email", email)
                     .getSingleResultOrNull();
@@ -115,7 +120,7 @@ public class UserDAOImpl implements UserDAO {
     public void delete(User user) {
         log.debug("Удаление из БД пользователя: {}", user.getId());
         Transaction transaction = null;
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             session.remove(user);
             transaction.commit();
@@ -139,7 +144,7 @@ public class UserDAOImpl implements UserDAO {
     public List<User> findAll() {
         log.debug("Формирование списка пользователей из БД.");
         List<User> users = new ArrayList<>();
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = sessionFactory.openSession()) {
             users.addAll(session.createQuery("FROM User", User.class).list());
         } catch (JDBCConnectionException e) {
             log.error("{}: {}", ERROR_CONNECTION_DB, e.getMessage(), e);
@@ -155,7 +160,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public boolean existsById(UUID id) {
         log.debug("Поиск присутствия в БД пользователя по id: {}", id);
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = sessionFactory.openSession()) {
             Long count = session.createQuery("select count(*) from User where id = :id", Long.class)
                     .setParameter("id",id)
                     .getSingleResult();
@@ -178,7 +183,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public boolean existsByEmail(String email) {
         log.debug("Поиск присутствия в БД пользователя по email: {}", email);
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = sessionFactory.openSession()) {
             Long count = session.createSelectionQuery("select count(*) from User where email = :email", Long.class)
                     .setParameter("email", email)
                     .getSingleResult();
