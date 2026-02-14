@@ -2,7 +2,6 @@ package org.example.userservice.model;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -12,7 +11,6 @@ import java.util.UUID;
 public class User {
     @Id
     @GeneratedValue
-    @UuidGenerator
     private UUID id;
 
     @Column(nullable = false, length = 50)
@@ -24,12 +22,13 @@ public class User {
     private Integer age;
 
     @CreationTimestamp
-    @Column(updatable = false)
-    private LocalDateTime created_at;
+    @Column(name = "created_at",updatable = false)
+    private LocalDateTime createdAt;
 
-    public User(){
+    public User() {
 
     }
+
     public User(String name, String email, Integer age) {
         this.name = name;
         this.email = email;
@@ -41,6 +40,14 @@ public class User {
         this.name = name;
         this.email = email;
         this.age = age;
+    }
+
+    public User(UUID id, String name, String email, Integer age, LocalDateTime created_at) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.createdAt = created_at;
     }
 
     public UUID getId() {
@@ -71,14 +78,13 @@ public class User {
         this.age = age;
     }
 
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
-
     @Override
     public String toString() {
         return String.format("User{id=%s, name=%s, email=%s, age=%s, createdAt=%s}",
-                id, name, email, age, created_at);
+                id, name, email, age, createdAt);
     }
 
 }

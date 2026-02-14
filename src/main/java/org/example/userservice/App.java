@@ -1,30 +1,13 @@
 package org.example.userservice;
-import org.example.userservice.config.HibernateUtil;
-import org.example.userservice.console.ConsoleUI;
-import org.example.userservice.dao.UserDAO;
-import org.example.userservice.dao.UserDAOImpl;
-import org.example.userservice.service.UserService;
-import org.example.userservice.service.UserServiceImp;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Hello world!
- *
- */
+@SpringBootApplication
 public class App 
 {
-    private static final Logger log = LoggerFactory.getLogger(App.class);
+//    private static final Logger log = LoggerFactory.getLogger(App.class);
     public static void main( String[] args )
     {
-        log.info("Приложение запущено.");
-        log.info("Запуск UserDAO");
-        UserDAO userDAO = new UserDAOImpl(HibernateUtil.getSessionFactory());
-        log.info("Запуск UserService");
-        UserService userService = new UserServiceImp(userDAO);
-        log.info("Запуск ConsoleUI");
-        ConsoleUI consoleUI = new ConsoleUI(userService);
-        consoleUI.show();
-        log.info("Приложение завершено.");
+        SpringApplication.run(App.class, args);
     }
 }

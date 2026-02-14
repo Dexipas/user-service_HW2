@@ -1,24 +1,35 @@
 package org.example.userservice.service;
 
 
-import org.example.userservice.dao.UserDAO;
+import jakarta.transaction.Transactional;
+import org.example.userservice.dto.UserDTO;
+import org.example.userservice.mapper.UserMapper;
+import org.example.userservice.repository.UserRepository;
 import org.example.userservice.exception.*;
 import org.example.userservice.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@Service
+@Transactional
 public class UserServiceImp implements UserService {
     private static final Logger log = LoggerFactory.getLogger(UserServiceImp.class);
-    private final UserDAO userDAO;
-    //    private final String regexEmail = "^[a-z0-9+_.-]+@([a-z]+)[.][a-z]+$";
 
-    public UserServiceImp(UserDAO userDAO) {
-        this.userDAO = userDAO;
+
+    private final UserRepository userRepository;
+    private final UserMapper userMapper;
+    @Autowired
+    public UserServiceImp(UserRepository userRepository, UserMapper userMapper) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
     }
+
 
     private void validateName(String name) {
         if(name == null || name.isEmpty()){
@@ -45,8 +56,9 @@ public class UserServiceImp implements UserService {
 
 
     }
+
     private void duplicateEmail(String email){
-        if(userDAO.existsByEmail(email.toLowerCase())){
+        if(userRepository.existsByEmail(email.toLowerCase())){
             throw new DuplicateEmailException(email);
         }
     }
@@ -73,63 +85,58 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public UUID createUser(String name, String email, Integer age) {
-        log.info("Начало создания пользователя: email={}", email);
-        validateName(name);
-        validateEmail(email);
-        duplicateEmail(email);
-        validateAge(age);
-        User user = userDAO.save(new User(name, email.toLowerCase(), age));
-        log.info("Пользователь создан успешно: ID={}, email={}", user.getId(), email);
+    public UUID createUser(UserDTO userDTO) {
+        log.info("Начало создания пользователя: email={}", userDTO.email());
+        validateName(userDTO.name());
+        validateEmail(userDTO.email());
+        duplicateEmail(userDTO.email());
+        validateAge(userDTO.age());
+        User user = userRepository.save(userMapper.toEntity(userDTO));
+        log.info("Пользователь создан успешно: ID={}, email={}", user.getId(), user.getEmail());
         return user.getId();
     }
 
     @Override
-    public UUID updateInfo(String id, String name, String email, Integer age) {
-        log.info("Начало изменения пользователя: email={}", email);
-        validateId(id);
-        UUID uuid = UUID.fromString(id);
-        if(!userDAO.existsById(uuid)){
-            throw new UserNotFoundException(uuid);
+    public UUID updateInfo(UserDTO userDTO) {
+        log.info("Начало изменения пользователя: email={}", userDTO.email());
+        validateId(userDTO.id().toString());
+        if(!userRepository.existsById(userDTO.id())){
+            throw new UserNotFoundException(userDTO.id());
         }
-        validateName(name);
-        validateEmail(email);
-        Optional<User> userChecked = userDAO.findByEmail(email);
+        validateName(userDTO.name());
+        validateEmail(userDTO.email());
+        Optional<User> userChecked = userRepository.findByEmail(userDTO.email());
         if(userChecked.isPresent())
-            if(!uuid.equals(userChecked.get().getId()))
-                duplicateEmail(email);
-        validateAge(age);
-        User user = userDAO.update(new User(uuid, name, email.toLowerCase(), age));
-        log.info("Пользователь успешно изменен: ID={}, email={}", user.getId(), email);
+            if(!userDTO.id().equals(userChecked.get().getId()))
+                duplicateEmail(userDTO.email());
+        validateAge(userDTO.age());
+        User user = userRepository.save(userMapper.toEntity(userDTO));
+        log.info("Пользователь успешно изменен: ID={}, email={}", user.getId(), user.getEmail());
         return user.getId();
     }
 
     @Override
-    public Optional<User> findById(String id) {
+    public UserDTO findById(String id) {
         log.info("Начало поиска пользователя по id={}", id);
         validateId(id);
         UUID uuid = UUID.fromString(id);
-        return userDAO.findById(uuid);
+        Optional<User> userFound = userRepository.findById(uuid);
+        return userFound.map(userMapper::toDTO)
+                .orElseThrow(() -> new UserNotFoundException(uuid));
     }
 
-    @Override
-    public Optional<User> findByEmail(String email) {
-        log.info("Начало поиска пользователя по email={}", email);
-        validateEmail(email);
-        return userDAO.findByEmail(email.toLowerCase());
-    }
 
     @Override
     public boolean deleteUser(String id) {
         log.info("Начало удаления пользователя: id={}", id);
         validateId(id);
         UUID uuid = UUID.fromString(id);
-        if(!userDAO.existsById(uuid)){
+        if(!userRepository.existsById(uuid)){
             throw new UserNotFoundException(uuid);
         }
-        Optional<User> user = userDAO.findById(uuid);
-        user.ifPresent(userDAO::delete);
-        boolean delResult = !userDAO.existsById(uuid);
+        Optional<User> user = userRepository.findById(uuid);
+        user.ifPresent(userRepository::delete);
+        boolean delResult = !userRepository.existsById(uuid);
         if(delResult)
             log.info("Пользователь успешно удален: id={}", id);
         else
@@ -138,8 +145,13 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public List<User> findAll() {
-        return userDAO.findAll();
+    public List<UserDTO> findAll() {
+        return userRepository
+                .findAll()
+                .stream()
+                .map(userMapper::toDTO)
+                .toList();
     }
+
 
 }
