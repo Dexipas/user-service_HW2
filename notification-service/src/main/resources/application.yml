@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/notifications_db
+    username: admin
+    password: hardpassword
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  kafka:
+    consumer:
+      group-id: notification-service-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: latest
+      enable-auto-commit: false
+      properties:
+        spring.json.trusted.packages: "org.example.events"
+
+  mail:
+    host: smtp.ethereal.email
+    port: 587
+    username: "jake.runolfsdottir44@ethereal.email"
+    password: "6WF1x8ynwgGAEewCsX"
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-notification.yaml
+#logging:
+#  level:
+#    org.springframework.kafka: DEBUG
+#    org.apache.kafka: DEBUG
+#    org.springframework.context: INFO
