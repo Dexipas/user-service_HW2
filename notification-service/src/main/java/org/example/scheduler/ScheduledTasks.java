@@ -19,7 +19,7 @@ public class ScheduledTasks {
         this.notificationService = notificationService;
     }
 
-    @Scheduled(cron = "*/30 * * * * ?")
+    @Scheduled(cron = "${cron.expression}")
     public void retrySendFailedMessage() {
         log.info("Начало обработки неотправленных сообщений на почту пользователей");
         try {
