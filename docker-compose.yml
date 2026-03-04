@@ -1,0 +1,58 @@
+services:                # Список всех "служб" (контейнеров) в проекте
+  users-db:                    # Техническое имя сервиса внутри Docker
+    image: postgres:15   # Какой образ скачать из Docker Hub (готовая ОС с установленным Postgres)
+    container_name: users-db # Имя, которое вы увидите в списке запущенных контейнеров
+
+    environment:         # Переменные окружения (настройки самой программы внутри контейнера)
+      POSTGRES_USER: ${POSTGRES_USER}       # Логин администратора
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}    # Пароль
+      POSTGRES_DB: users_db     # Имя базы, которая создастся при первом запуске
+
+    ports:               # Связь портов: "Ваш_ПК:Внутри_Контейнера"
+      - "5432:5432"      # Позволяет подключаться к базе через localhost:5432
+
+    volumes:             # Сохранение данных
+      - users_db_data:/var/lib/postgresql/data # Чтобы данные не удалились вместе с контейнером
+
+  notifications-db:
+    image: postgres:15
+    container_name: notifications-db
+
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: notifications_db
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - notifications_db_data:/var/lib/postgresql/data
+
+  kafka:
+    image: apache/kafka:latest
+    container_name: kafka-kraft
+    ports:
+      - "9092:9092"
+    environment:
+      # Роли узла: он и контроллер (вместо Zookeeper), и брокер (хранит данные)
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: 'broker,controller'
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@localhost:9093'
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false" #Убираю автодобавление топиков
+
+      # Настройка слушателей
+      KAFKA_LISTENERS: 'PLAINTEXT://:9092,CONTROLLER://:9093'
+      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://localhost:9092'
+      KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT'
+
+      # Генерация ID кластера (обязательно для KRaft)
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
+volumes:                 # Объявление именованного хранилища
+  users_db_data:
+  notifications_db_data:

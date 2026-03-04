@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 14324526
+      author: Dexipas
+      changes:
+        - createTable:
+            tableName: events
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  defaultValueComputed: gen_random_uuid()
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: attempts_to_send
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: recent_attempt
+                  type: timestamp
+                  constraints:
+                    nullable: false

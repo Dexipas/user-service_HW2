@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/users_db
+    username: admin
+    password: hardpassword
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties: # Дополнительные параметры (необязательно)
+        ask: all # подтверждение от всех реплик
+        retries: 5 # количество повторов при ошибке
+        enable.idempotence: true # идемпотентность (для exactly-once)
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-user.yaml
+server:
+  port: 8080
