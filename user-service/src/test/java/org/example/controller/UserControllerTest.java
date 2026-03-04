@@ -2,13 +2,15 @@ package org.example.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.example.userservice.App;
+import org.example.userservice.UserServiceApp;
+import org.example.userservice.assembler.UserDTOAssembler;
 import org.example.userservice.controller.UserController;
 import org.example.userservice.dto.UserDTO;
 import org.example.userservice.exception.InvalidEmailException;
 import org.example.userservice.exception.InvalidIdException;
 import org.example.userservice.exception.InvalidNameException;
 import org.example.userservice.exception.UserNotFoundException;
+import org.example.userservice.model.User;
 import org.example.userservice.service.UserService;
 
 import org.junit.jupiter.api.Test;
@@ -16,6 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -31,7 +35,8 @@ import static org.mockito.Mockito.when;
 
 
 @WebMvcTest(UserController.class)
-@ContextConfiguration(classes = App.class)
+@ContextConfiguration(classes = UserServiceApp.class)
+@Import(UserDTOAssembler.class)
 public class UserControllerTest {
     private static final UUID USER_ID = UUID.fromString("e1732746-f2d8-4d6b-be38-3822814d5362");
     private static final String USER_NAME = "Egor";
@@ -48,7 +53,7 @@ public class UserControllerTest {
 
     @Test
     public void create_WithValidData_Response201WithId() throws Exception {
-        UserDTO userDTO = UserDTO.create(USER_NAME, USER_EMAIL, USER_AGE);
+        UserDTO userDTO = UserDTO.withId(USER_ID, USER_NAME, USER_EMAIL, USER_AGE);
 
         when(userService.createUser(any(UserDTO.class))).thenReturn(userDTO);
 
@@ -108,12 +113,11 @@ public class UserControllerTest {
     }
 
     @Test
-    public void delete_WithCorrectId_Response200WithTrue() throws Exception {
+    public void delete_WithCorrectId_Response204WithTrue() throws Exception {
         when(userService.deleteUser(USER_ID.toString())).thenReturn(true);
 
         mockMvc.perform(delete("/api/users/{id}", USER_ID))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$").value(true));
+                .andExpect(status().isNoContent());
     }
 
     @Test
@@ -162,8 +166,8 @@ public class UserControllerTest {
         mockMvc.perform(get("/api/users"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.size()").value(2))
-                .andExpect(jsonPath("$[0].name").value(USER_NAME))
-                .andExpect(jsonPath("$[1].name").value("Fillip"));
+                .andExpect(jsonPath("$._embedded.userDTOList[0].name").value(USER_NAME))
+                .andExpect(jsonPath("$._embedded.userDTOList[1].name").value("Fillip"));
     }
 
 }

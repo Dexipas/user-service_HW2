@@ -1415,7 +1415,7 @@ org.hibernate.exception.ConstraintViolationException: could not execute statemen
 	at org.example.userservice.service.UserServiceImp.updateInfo(UserServiceImp.java:94)
 	at org.example.userservice.console.ConsoleUI.changeUserData(ConsoleUI.java:126)
 	at org.example.userservice.console.ConsoleUI.show(ConsoleUI.java:68)
-	at org.example.userservice.App.main(App.java:29)
+	at org.example.userservice.UserServiceApp.main(App.java:29)
 Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_email_key"
   Подробности: Key (email)=(ara@ar.ru) already exists.
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
@@ -1656,7 +1656,7 @@ org.hibernate.exception.ConstraintViolationException: could not execute statemen
 	at org.example.userservice.service.UserServiceImp.updateInfo(UserServiceImp.java:102)
 	at org.example.userservice.console.ConsoleUI.changeUserData(ConsoleUI.java:126)
 	at org.example.userservice.console.ConsoleUI.show(ConsoleUI.java:68)
-	at org.example.userservice.App.main(App.java:29)
+	at org.example.userservice.UserServiceApp.main(App.java:29)
 Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_email_key"
   Подробности: Key (email)=(ded@ded.ded) already exists.
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
@@ -2416,7 +2416,7 @@ org.hibernate.exception.ConstraintViolationException: could not execute statemen
 	at org.example.userservice.service.UserServiceImp.updateInfo(UserServiceImp.java:103)
 	at org.example.userservice.console.ConsoleUI.changeUserData(ConsoleUI.java:126)
 	at org.example.userservice.console.ConsoleUI.show(ConsoleUI.java:68)
-	at org.example.userservice.App.main(App.java:29)
+	at org.example.userservice.UserServiceApp.main(App.java:29)
 Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "users_email_key"
   Подробности: Key (email)=(ded@ded.ded) already exists.
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
@@ -5654,7 +5654,7 @@ org.postgresql.util.PSQLException: Подсоединение по адресу 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
@@ -5705,7 +5705,7 @@ java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.Sql
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 2026-02-12 14:46:08 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 2026-02-12 14:46:08 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7cb29ea8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@b5c902)
 2026-02-12 14:46:09 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
@@ -5771,7 +5771,7 @@ org.postgresql.util.PSQLException: Подсоединение по адресу 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
@@ -5810,7 +5810,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.] [n/a]
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
@@ -5940,7 +5940,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImp' defined in file [C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\target\classes\org\example\userservice\service\UserServiceImp.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract org.example.userservice.model.User org.example.userservice.repository.UserRepository.update(org.example.userservice.model.User); Reason: Failed to create query for method public abstract org.example.userservice.model.User org.example.userservice.repository.UserRepository.update(org.example.userservice.model.User); No property 'update' found for type 'User'
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
@@ -6092,7 +6092,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImp' defined in file [C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\target\classes\org\example\userservice\service\UserServiceImp.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in org.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract org.example.userservice.model.User org.example.userservice.repository.UserRepository.update(org.example.userservice.model.User); Reason: Failed to create query for method public abstract org.example.userservice.model.User org.example.userservice.repository.UserRepository.update(org.example.userservice.model.User); No property 'update' found for type 'User'
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
@@ -11138,7 +11138,7 @@ org.postgresql.util.PSQLException: Подсоединение по адресу 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
@@ -11176,7 +11176,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
 	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
@@ -11520,7 +11520,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/init/changeset-init-user.yaml::4231231::d e x i p a s (generated):
      Reason: liquibase.exception.DatabaseException: ERROR: relation "users" already exists [Failed SQL: (0) CREATE TABLE public.users (id UUID DEFAULT gen_random_uuid() NOT NULL, name VARCHAR(99) NOT NULL, email VARCHAR(255) NOT NULL, age INTEGER NOT NULL, created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL, CONSTRAINT users_pkey PRIMARY KEY (id), UNIQUE (email))]
 	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:136)
@@ -11647,7 +11647,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/init/changeset-init-user.yaml::4231232::d e x i p a s (generated):
      Reason: liquibase.exception.DatabaseException: ERROR: relation "users" already exists [Failed SQL: (0) CREATE TABLE public.users (id UUID DEFAULT gen_random_uuid() NOT NULL, name VARCHAR(99) NOT NULL, email VARCHAR(255) NOT NULL, age INTEGER NOT NULL, created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL, CONSTRAINT users_pkey PRIMARY KEY (id), UNIQUE (email))]
 	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:136)
@@ -12474,7 +12474,7 @@ org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 2026-02-22 00:58:14 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 2026-02-22 00:58:14 INFO  o.a.c.c.StandardService - Stopping service [Tomcat]
 2026-02-22 00:58:14 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
@@ -12500,7 +12500,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
@@ -12573,7 +12573,7 @@ org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 2026-02-22 01:02:42 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 2026-02-22 01:02:42 INFO  o.a.c.c.StandardService - Stopping service [Tomcat]
 2026-02-22 01:02:42 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
@@ -12599,7 +12599,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
@@ -12672,7 +12672,7 @@ org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 2026-02-22 01:03:12 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 2026-02-22 01:03:12 INFO  o.a.c.c.StandardService - Stopping service [Tomcat]
 2026-02-22 01:03:12 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
@@ -12698,7 +12698,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
@@ -12771,7 +12771,7 @@ org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 2026-02-22 01:07:56 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 2026-02-22 01:07:56 INFO  o.a.c.c.StandardService - Stopping service [Tomcat]
 2026-02-22 01:07:56 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
@@ -12797,7 +12797,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
@@ -12870,7 +12870,7 @@ org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 2026-02-22 01:10:48 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 2026-02-22 01:10:48 INFO  o.a.c.c.StandardService - Stopping service [Tomcat]
 2026-02-22 01:10:48 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
@@ -12896,7 +12896,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at org.example.userservice.App.main(App.java:11)
+	at org.example.userservice.UserServiceApp.main(App.java:11)
 Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: FATAL: database "users-db" does not exist
 	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
@@ -16321,3 +16321,2130 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2026-02-22 19:07:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-02-22 19:07:25 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-02-22 19:07:25 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 13:42:23 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 13:42:23 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 30160 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 13:42:23 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 13:42:24 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conventionErrorViewResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/error/ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration; factoryMethodName=conventionErrorViewResolver; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/boot/webmvc/autoconfigure/error/ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration.class]] for bean 'conventionErrorViewResolver' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration; factoryMethodName=conventionErrorViewResolver; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/error/ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration.class]] bound.
+2026-02-26 13:42:24 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-26 13:42:24 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conventionErrorViewResolver', defined in class path resource [org/springframework/boot/webmvc/autoconfigure/error/ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/error/ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2026-02-26 13:42:57 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 13:42:57 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 26772 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 13:42:57 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 13:42:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 13:42:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2026-02-26 13:42:58 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 13:42:58 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 13:42:58 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 13:42:58 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 13:42:58 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 13:42:58 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 864 ms
+2026-02-26 13:42:58 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 13:42:58 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@662be9f7
+2026-02-26 13:42:58 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 13:42:59 INFO  liquibase.database - Set default schema name to public
+2026-02-26 13:42:59 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 13:42:59 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 13:42:59 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 13:42:59 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 13:42:59 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 13:42:59 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 13:42:59 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 13:42:59 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@62794582) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@c82ad22)
+2026-02-26 13:43:00 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 13:43:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 13:43:00 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 13:43:00 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 13:43:00 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 13:43:00 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 13:43:00 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772102580670
+2026-02-26 13:43:01 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 13:43:01 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 13:43:01 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 13:43:01 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 13:43:01 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 13:43:01 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 13:43:01 INFO  o.e.userservice.App - Started App in 3.55 seconds (process running for 4.089)
+2026-02-26 13:43:04 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 13:43:04 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 13:43:04 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 13:43:30 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 13:43:30 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 24296 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 13:43:30 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 13:43:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 13:43:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2026-02-26 13:43:31 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 13:43:31 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 13:43:31 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 13:43:31 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 13:43:31 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 13:43:31 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 864 ms
+2026-02-26 13:43:31 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 13:43:31 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@252ec02e
+2026-02-26 13:43:31 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 13:43:31 INFO  liquibase.database - Set default schema name to public
+2026-02-26 13:43:31 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 13:43:31 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 13:43:32 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 13:43:32 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 13:43:32 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 13:43:32 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 13:43:32 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 13:43:32 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7404aff2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@12723c5d)
+2026-02-26 13:43:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 13:43:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 13:43:33 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 13:43:33 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 13:43:33 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 13:43:33 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 13:43:33 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772102613639
+2026-02-26 13:43:33 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 13:43:33 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 13:43:33 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 13:43:33 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 13:43:33 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 13:43:33 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 13:43:33 INFO  o.e.userservice.App - Started App in 3.489 seconds (process running for 4.009)
+2026-02-26 13:43:39 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 13:43:39 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 13:43:39 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+2026-02-26 13:43:39 WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.example.userservice.controller.UserController
+2026-02-26 13:43:40 INFO  o.s.a.AbstractOpenApiResource - Init duration for springdoc-openapi is: 147 ms
+2026-02-26 13:57:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 13:57:05 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 13:57:05 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 15:39:50 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 15:39:50 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 24224 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 15:39:50 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 15:39:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 15:39:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+2026-02-26 15:39:51 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 15:39:51 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 15:39:51 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 15:39:51 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 15:39:51 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 15:39:51 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 934 ms
+2026-02-26 15:39:51 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 15:39:51 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a7b309b
+2026-02-26 15:39:51 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 15:39:51 INFO  liquibase.database - Set default schema name to public
+2026-02-26 15:39:52 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 15:39:52 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 15:39:52 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 15:39:52 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 15:39:52 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 15:39:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 15:39:52 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 15:39:52 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@14ad42) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@608b906d)
+2026-02-26 15:39:52 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 15:39:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 15:39:53 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 15:39:53 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 15:39:53 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 15:39:53 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 15:39:53 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772109593819
+2026-02-26 15:39:54 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 15:39:54 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 15:39:54 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 15:39:54 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 15:39:54 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 15:39:54 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 15:39:54 INFO  o.e.userservice.App - Started App in 3.683 seconds (process running for 4.204)
+2026-02-26 15:39:59 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 15:39:59 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 15:39:59 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-26 15:39:59 WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.example.userservice.controller.UserController
+2026-02-26 15:39:59 INFO  o.s.a.AbstractOpenApiResource - Init duration for springdoc-openapi is: 157 ms
+2026-02-26 15:41:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 15:41:35 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 15:41:35 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 15:52:20 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 15:52:20 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 17276 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 15:52:20 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 15:52:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 15:52:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2026-02-26 15:52:21 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 15:52:21 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 15:52:21 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 15:52:21 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 15:52:21 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 15:52:21 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 931 ms
+2026-02-26 15:52:21 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 15:52:21 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10d18696
+2026-02-26 15:52:21 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 15:52:22 INFO  liquibase.database - Set default schema name to public
+2026-02-26 15:52:22 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 15:52:22 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 15:52:22 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 15:52:22 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 15:52:22 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 15:52:22 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 15:52:22 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 15:52:22 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1ac3a6f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@fee7ca)
+2026-02-26 15:52:22 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 15:52:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 15:52:23 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 15:52:23 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 15:52:23 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 15:52:23 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 15:52:23 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772110343917
+2026-02-26 15:52:24 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 15:52:24 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 15:52:24 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 15:52:24 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 15:52:24 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 15:52:24 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 15:52:24 INFO  o.e.userservice.App - Started App in 3.733 seconds (process running for 4.244)
+2026-02-26 15:52:30 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 15:52:30 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 15:52:30 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+2026-02-26 15:52:30 WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.example.userservice.controller.UserController
+2026-02-26 15:52:30 INFO  o.s.a.AbstractOpenApiResource - Init duration for springdoc-openapi is: 142 ms
+2026-02-26 15:55:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 15:55:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 15:55:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 15:55:29 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 15:55:29 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 12700 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 15:55:29 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 15:55:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 15:55:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2026-02-26 15:55:29 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 15:55:29 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 15:55:29 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 15:55:29 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 15:55:29 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 15:55:29 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 838 ms
+2026-02-26 15:55:29 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 15:55:30 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a7b309b
+2026-02-26 15:55:30 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 15:55:30 INFO  liquibase.database - Set default schema name to public
+2026-02-26 15:55:30 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 15:55:30 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 15:55:30 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 15:55:30 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 15:55:30 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 15:55:30 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 15:55:30 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 15:55:30 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@14ad42) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@608b906d)
+2026-02-26 15:55:31 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 15:55:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 15:55:31 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 15:55:31 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 15:55:31 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 15:55:31 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 15:55:31 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772110531935
+2026-02-26 15:55:32 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 15:55:32 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 15:55:32 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 15:55:32 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 15:55:32 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 15:55:32 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 15:55:32 INFO  o.e.userservice.App - Started App in 3.385 seconds (process running for 3.851)
+2026-02-26 15:55:32 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 15:55:32 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 15:55:32 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-26 15:55:32 WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.example.userservice.controller.UserController
+2026-02-26 15:55:32 INFO  o.s.a.AbstractOpenApiResource - Init duration for springdoc-openapi is: 157 ms
+2026-02-26 16:52:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:52:32 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 16:52:32 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 17:51:24 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 17:51:24 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 11964 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 17:51:24 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 17:51:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 17:51:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+2026-02-26 17:51:24 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 17:51:24 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 17:51:24 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 17:51:24 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 17:51:24 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 17:51:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 915 ms
+2026-02-26 17:51:25 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 17:51:25 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@78116659
+2026-02-26 17:51:25 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 17:51:25 INFO  liquibase.database - Set default schema name to public
+2026-02-26 17:51:25 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 17:51:25 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 17:51:25 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 17:51:25 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 17:51:25 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 17:51:25 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 17:51:25 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 17:51:25 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@545f0b6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c9ef37b)
+2026-02-26 17:51:26 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 17:51:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 17:51:26 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 17:51:26 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 17:51:27 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 17:51:27 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 17:51:27 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772117487024
+2026-02-26 17:51:27 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 17:51:27 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 17:51:27 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 17:51:27 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 17:51:27 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 17:51:27 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 17:51:27 INFO  o.e.userservice.App - Started App in 3.474 seconds (process running for 3.943)
+2026-02-26 17:52:04 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 17:52:04 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 17:52:04 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-26 17:52:04 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=lenykaperviy@ya.ru
+2026-02-26 17:52:04 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 17:52:04 INFO  o.a.k.c.p.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-02-26 17:52:04 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-02-26 17:52:04 WARN  o.a.k.c.p.ProducerConfig - These configurations '[ask]' were supplied but are not used yet.
+2026-02-26 17:52:04 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 17:52:04 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 17:52:04 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772117524251
+2026-02-26 17:52:04 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-2 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 17:52:04 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-0 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 17:52:04 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-1 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 17:52:04 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-02-26 17:52:04 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=c59dfbef-1010-46c2-a789-cdd32c86d33f, email=lenykaperviy@ya.ru
+2026-02-26 17:52:04 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (age,created_at,email,name,id) 
+    values
+        (?,?,?,?,?)
+2026-02-26 17:52:04 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "org.example.userservice.dto.UserDTO.id()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "org.example.userservice.dto.UserDTO.id()" is null
+	at org.example.userservice.assembler.UserDTOAssembler.toModel(UserDTOAssembler.java:21)
+	at org.example.userservice.controller.UserController.create(UserController.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-02-26 17:52:04 INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2000 with epoch 0
+2026-02-26 17:52:35 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=lenykaperviy@ya.ru
+2026-02-26 17:52:35 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 17:52:46 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-02-26 17:52:46 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 17:52:46 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 17:52:46 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 17:52:46 INFO  o.a.k.c.u.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2026-02-26 17:52:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 17:52:46 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 17:52:46 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 17:53:33 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 17:53:33 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 7436 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 17:53:33 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 17:53:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 17:53:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2026-02-26 17:53:34 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 17:53:34 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 17:53:34 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 17:53:34 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 17:53:34 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 17:53:34 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 926 ms
+2026-02-26 17:53:35 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 17:53:35 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@78116659
+2026-02-26 17:53:35 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 17:53:35 INFO  liquibase.database - Set default schema name to public
+2026-02-26 17:53:35 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 17:53:35 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 17:53:35 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 17:53:35 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 17:53:35 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 17:53:35 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 17:53:35 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 17:53:35 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@545f0b6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c9ef37b)
+2026-02-26 17:53:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 17:53:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 17:53:36 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 17:53:36 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 17:53:36 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 17:53:36 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 17:53:36 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772117616961
+2026-02-26 17:53:37 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 17:53:37 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 17:53:37 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 17:53:37 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 17:53:37 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 17:53:37 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 17:53:37 INFO  o.e.userservice.App - Started App in 3.45 seconds (process running for 3.924)
+2026-02-26 17:53:49 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 17:53:49 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 17:53:49 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-26 17:53:49 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-26 17:55:09 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=lenykaperviy@ya.ru
+2026-02-26 17:55:09 DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 17:55:09 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 17:55:09 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=c59dfbef-1010-46c2-a789-cdd32c86d33f, email=lenykaperviy@ya.ru
+2026-02-26 17:55:09 DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        age=?,
+        email=?,
+        name=? 
+    where
+        id=?
+2026-02-26 18:01:05 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=art200@ya.ru
+2026-02-26 18:01:05 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 18:01:05 INFO  o.a.k.c.p.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-02-26 18:01:05 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-02-26 18:01:05 WARN  o.a.k.c.p.ProducerConfig - These configurations '[ask]' were supplied but are not used yet.
+2026-02-26 18:01:05 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 18:01:05 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 18:01:05 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772118065531
+2026-02-26 18:01:05 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-2 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 18:01:05 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-0 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 18:01:05 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-1 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 18:01:05 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-02-26 18:01:05 INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2001 with epoch 0
+2026-02-26 18:01:05 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=cc14aae0-49f0-4464-ba50-3ce3821e2b30, email=art200@ya.ru
+2026-02-26 18:01:05 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (age,created_at,email,name,id) 
+    values
+        (?,?,?,?,?)
+2026-02-26 18:01:05 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "org.example.userservice.dto.UserDTO.id()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "org.example.userservice.dto.UserDTO.id()" is null
+	at org.example.userservice.assembler.UserDTOAssembler.toModel(UserDTOAssembler.java:21)
+	at org.example.userservice.controller.UserController.create(UserController.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-02-26 18:04:34 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-02-26 18:04:34 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 18:04:34 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 18:04:34 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 18:04:34 INFO  o.a.k.c.u.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2026-02-26 18:04:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 18:04:34 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 18:04:34 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 18:04:36 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 18:04:36 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 16448 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 18:04:36 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 18:04:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 18:04:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+2026-02-26 18:04:37 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 18:04:37 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 18:04:37 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 18:04:37 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 18:04:37 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 18:04:37 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 885 ms
+2026-02-26 18:04:37 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 18:04:37 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@788e3702
+2026-02-26 18:04:37 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 18:04:37 INFO  liquibase.database - Set default schema name to public
+2026-02-26 18:04:37 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 18:04:37 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 18:04:37 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 18:04:37 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 18:04:37 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 18:04:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 18:04:37 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 18:04:37 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4feec184) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5e055ce1)
+2026-02-26 18:04:38 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 18:04:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 18:04:38 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 18:04:39 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 18:04:39 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 18:04:39 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 18:04:39 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772118279373
+2026-02-26 18:04:39 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 18:04:39 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 18:04:39 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 18:04:39 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 18:04:39 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 18:04:39 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 18:04:39 INFO  o.e.userservice.App - Started App in 3.439 seconds (process running for 3.916)
+2026-02-26 18:05:03 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 18:05:03 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 18:05:03 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+2026-02-26 18:05:03 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=polyastar@ya.ru
+2026-02-26 18:05:03 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 18:05:03 INFO  o.a.k.c.p.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-02-26 18:05:03 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-02-26 18:05:03 WARN  o.a.k.c.p.ProducerConfig - These configurations '[ask]' were supplied but are not used yet.
+2026-02-26 18:05:03 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 18:05:03 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 18:05:03 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772118303397
+2026-02-26 18:05:03 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-2 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 18:05:03 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-0 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 18:05:03 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-1 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 18:05:03 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-02-26 18:05:03 INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2002 with epoch 0
+2026-02-26 18:05:03 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=f669b38d-6a0d-4dc6-b886-501a6658c26e, email=polyastar@ya.ru
+2026-02-26 18:05:03 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (age,created_at,email,name,id) 
+    values
+        (?,?,?,?,?)
+2026-02-26 18:05:24 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-02-26 18:05:24 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 18:05:24 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 18:05:24 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 18:05:24 INFO  o.a.k.c.u.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2026-02-26 18:05:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 18:05:24 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 18:05:24 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 19:14:07 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 19:14:07 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 6636 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 19:14:07 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 19:14:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 19:14:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2026-02-26 19:14:08 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 19:14:08 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 19:14:08 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 19:14:08 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 19:14:08 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 19:14:08 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 930 ms
+2026-02-26 19:14:08 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 19:14:08 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@24d8f87a
+2026-02-26 19:14:08 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 19:14:08 INFO  liquibase.database - Set default schema name to public
+2026-02-26 19:14:08 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 19:14:08 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 19:14:08 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 19:14:08 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 19:14:08 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 19:14:08 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 19:14:08 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 19:14:08 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@24435620) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4c02899)
+2026-02-26 19:14:09 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 19:14:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 19:14:09 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 19:14:10 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 19:14:10 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 19:14:10 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 19:14:10 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772122450209
+2026-02-26 19:14:10 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 19:14:10 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 19:14:10 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 19:14:10 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 19:14:10 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 19:14:10 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 19:14:10 INFO  o.e.userservice.App - Started App in 3.574 seconds (process running for 4.109)
+2026-02-26 19:14:31 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 19:14:31 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 19:14:31 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-26 19:14:31 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-26 19:15:32 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=c59dfbef-1010-46c2-a789-cdd32c86d33f
+2026-02-26 19:15:32 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 19:52:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 19:52:03 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 19:52:03 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-26 19:52:05 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-26 19:52:05 INFO  o.e.userservice.App - Starting App using Java 24.0.1 with PID 16212 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-26 19:52:05 INFO  o.e.userservice.App - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 19:52:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 19:52:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2026-02-26 19:52:06 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-26 19:52:06 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 19:52:06 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-26 19:52:06 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-26 19:52:06 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 19:52:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 982 ms
+2026-02-26 19:52:07 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 19:52:07 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6b063470
+2026-02-26 19:52:07 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 19:52:07 INFO  liquibase.database - Set default schema name to public
+2026-02-26 19:52:07 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-26 19:52:07 INFO  liquibase.executor - Changelog query completed.
+2026-02-26 19:52:07 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 19:52:07 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-26 19:52:07 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-26 19:52:07 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 19:52:07 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 19:52:07 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6f4fc83f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@66b90ab3)
+2026-02-26 19:52:08 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 19:52:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 19:52:08 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 19:52:09 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-26 19:52:09 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 19:52:09 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 19:52:09 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772124729275
+2026-02-26 19:52:09 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-26 19:52:09 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 19:52:09 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 19:52:09 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 19:52:09 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 19:52:09 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-26 19:52:09 INFO  o.e.userservice.App - Started App in 3.863 seconds (process running for 4.391)
+2026-02-26 19:52:28 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 19:52:28 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 19:52:28 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-26 19:52:28 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-26 19:53:14 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=c59dfbef-1010-46c2-a789-cdd32c86d33f
+2026-02-26 19:53:14 DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 19:53:14 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 19:53:14 DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        users 
+    where
+        id=?
+2026-02-26 19:53:14 DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 19:53:14 INFO  o.a.k.c.p.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-02-26 19:53:14 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-02-26 19:53:14 WARN  o.a.k.c.p.ProducerConfig - These configurations '[ask]' were supplied but are not used yet.
+2026-02-26 19:53:14 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-26 19:53:14 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-26 19:53:14 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772124794466
+2026-02-26 19:53:14 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-2 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 19:53:14 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-0 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 19:53:14 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-1 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-26 19:53:14 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-02-26 19:53:14 INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2003 with epoch 0
+2026-02-26 19:53:14 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=c59dfbef-1010-46c2-a789-cdd32c86d33f
+2026-02-26 20:01:52 WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.example.userservice.controller.UserController
+2026-02-26 20:01:52 INFO  o.s.a.AbstractOpenApiResource - Init duration for springdoc-openapi is: 150 ms
+2026-02-26 20:02:14 INFO  o.a.k.c.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2026-02-26 20:27:26 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-02-26 20:27:26 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-26 20:27:26 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-26 20:27:26 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-26 20:27:26 INFO  o.a.k.c.u.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2026-02-26 20:27:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 20:27:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-26 20:27:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-27 03:32:22 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-02-27 03:32:22 INFO  o.e.u.UserServiceApp - Starting UserServiceApp using Java 24.0.1 with PID 17512 (C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service\target\classes started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2)
+2026-02-27 03:32:22 INFO  o.e.u.UserServiceApp - No active profile set, falling back to 1 default profile: "default"
+2026-02-27 03:32:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-27 03:32:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2026-02-27 03:32:23 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-02-27 03:32:23 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-27 03:32:23 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-27 03:32:23 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-02-27 03:32:23 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2026-02-27 03:32:23 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 978 ms
+2026-02-27 03:32:23 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-27 03:32:23 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6562cc23
+2026-02-27 03:32:23 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-27 03:32:23 INFO  liquibase.database - Set default schema name to public
+2026-02-27 03:32:23 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-02-27 03:32:23 INFO  liquibase.executor - Changelog query completed.
+2026-02-27 03:32:23 INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-27 03:32:23 INFO  o.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-02-27 03:32:23 INFO  o.h.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-02-27 03:32:24 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-27 03:32:24 WARN  o.h.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-27 03:32:24 DEBUG o.h.t.d.s.s.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@24435620) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4c02899)
+2026-02-27 03:32:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-27 03:32:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-27 03:32:25 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-27 03:32:25 INFO  o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-02-27 03:32:25 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-27 03:32:25 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-27 03:32:25 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772152345645
+2026-02-27 03:32:25 INFO  o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2026-02-27 03:32:25 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-27 03:32:25 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-27 03:32:25 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-27 03:32:25 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-27 03:32:25 INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-27 03:32:25 INFO  o.e.u.UserServiceApp - Started UserServiceApp in 3.776 seconds (process running for 4.292)
+2026-02-27 03:33:22 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-27 03:33:22 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-27 03:33:22 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-27 03:33:23 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=elena111@ya.ru
+2026-02-27 03:33:23 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-27 03:33:23 INFO  o.a.k.c.p.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-02-27 03:33:23 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-02-27 03:33:23 WARN  o.a.k.c.p.ProducerConfig - These configurations '[ask]' were supplied but are not used yet.
+2026-02-27 03:33:23 INFO  o.a.k.c.u.AppInfoParser - Kafka version: 3.4.1
+2026-02-27 03:33:23 INFO  o.a.k.c.u.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2026-02-27 03:33:23 INFO  o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1772152403127
+2026-02-27 03:33:23 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-2 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-27 03:33:23 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-0 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-27 03:33:23 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition user-event-1 to 6 since the associated topicId changed from null to YNDojU74TQafSQqS3OZTIA
+2026-02-27 03:33:23 INFO  o.a.k.c.Metadata - [Producer clientId=producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-02-27 03:33:23 INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2004 with epoch 0
+2026-02-27 03:33:23 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=99211288-e211-44a7-af3c-a1fc6db0338d, email=elena111@ya.ru
+2026-02-27 03:33:23 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (age,created_at,email,name,id) 
+    values
+        (?,?,?,?,?)
+2026-02-27 03:37:03 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0
+2026-02-27 03:37:15 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=f669b38d-6a0d-4dc6-b886-501a6658c26e
+2026-02-27 03:37:16 DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-27 03:37:16 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-27 03:37:16 DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        users 
+    where
+        id=?
+2026-02-27 03:37:16 DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-27 03:37:16 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=f669b38d-6a0d-4dc6-b886-501a6658c26e
+2026-02-27 03:42:23 INFO  o.a.k.c.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2026-02-27 03:49:35 INFO  o.a.k.c.p.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-02-27 03:49:35 INFO  o.a.k.c.m.Metrics - Metrics scheduler closed
+2026-02-27 03:49:35 INFO  o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-02-27 03:49:35 INFO  o.a.k.c.m.Metrics - Metrics reporters closed
+2026-02-27 03:49:35 INFO  o.a.k.c.u.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2026-02-27 03:49:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-27 03:49:35 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-27 03:49:35 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.

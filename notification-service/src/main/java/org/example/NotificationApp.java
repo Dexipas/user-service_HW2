@@ -8,10 +8,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableKafka
 @EnableScheduling
-public class App 
+public class NotificationApp
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(NotificationApp.class, args);
     }
 }

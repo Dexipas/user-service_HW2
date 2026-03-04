@@ -53,6 +53,7 @@ public class UserServiceImp implements UserService {
         UserCreatedEvent userCreatedEvent = new UserCreatedEvent(user.getEmail());
         kafkaTemplate.send("user-event", userCreatedEvent);
         log.info("Пользователь создан успешно: ID={}, email={}", user.getId(), user.getEmail());
+        userDTO = userMapper.toDTO(user);
         return userDTO;
     }
 
