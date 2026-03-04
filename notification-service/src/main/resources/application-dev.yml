@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  mail:
+    username: ${MAIL_USER}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+
+  kafka:
+    consumer:
+      group-id: notification-service-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: latest
+      enable-auto-commit: false
+      properties:
+        spring.json.trusted.packages: "org.example.events"
+
+cron:
+  expression: "*/30 * * * * ?"
