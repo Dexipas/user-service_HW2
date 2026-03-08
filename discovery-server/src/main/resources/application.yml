@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: discovery-server
+  config:
+    import: "configserver:http://config-server:8888"
+
+#server:
+#  port: 8761
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    # Eureka Server не регистрируется сам в себе
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  server:
+#    # Время ожидания для синхронизации
+#    wait-time-in-ms-when-sync-empty: 0
+#    # Удалять ли недоступные сервисы
+#    enable-self-preservation: false  # только для разработки!

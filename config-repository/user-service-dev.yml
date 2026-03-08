@@ -1,0 +1,25 @@
+spring:
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties: # Дополнительные параметры (необязательно)
+        acks: all # подтверждение от всех реплик
+        retries: 5 # количество повторов при ошибке
+        enable.idempotence: true # идемпотентность (для exactly-once)
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-user.yaml
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://discovery-server:8761/eureka/
+      fetch-registry: true
+      register-with-eureka: true
+    instance:
+      non-secure-port: ${server.port}
+      prefer-ip-address: true
+      instance-id: ${spring.application.name}:${random.value}
+      status-page-url-path: /actuator/info
+      health-check-url-path: /actuator/health

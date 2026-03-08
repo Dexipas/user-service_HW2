@@ -18,7 +18,8 @@ public class UserDTOAssembler implements RepresentationModelAssembler<UserDTO, E
                 linkTo(methodOn(UserController.class).create(userDTO)).withRel("save"),
                 linkTo(methodOn(UserController.class).update(userDTO)).withRel("update"),
                 linkTo(methodOn(UserController.class).findAll()).withRel("users"),
-                linkTo(methodOn(UserController.class).findById(userDTO.id().toString())).withSelfRel(),
+                linkTo(methodOn(UserController.class).findById(userDTO.id().toString())).withRel("findById"),
+                linkTo(methodOn(UserController.class).findByEmail(userDTO.email())).withRel("findByEmail"),
                 linkTo(methodOn(UserController.class).delete(userDTO.id().toString())).withRel("delete")
                 );
     }

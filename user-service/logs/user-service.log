@@ -3175,3 +3175,269 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2026-02-28 21:13:02 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
 2026-02-28 21:13:02 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
 2026-02-28 21:13:02 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 2.295 seconds (process running for 3.186)
+2026-03-07 20:51:21 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:51:21 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 27356 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:51:21 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:51:21 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:51:21 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:51:21 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@59d77850 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:51:21 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:51:21 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:51:21 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@10bea4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:51:21 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:51:21 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:51:21 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@7e2c64 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:51:23 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:51:23 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:51:23 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-03-07 20:51:23 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.196 seconds (process running for 3.991)
+2026-03-07 20:51:23 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:51:23 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mailru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd51-4deb-4f2a-b9a4-8e9b5f
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:51:23 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:53:02 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:53:02 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 2052 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:53:02 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:53:02 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:53:02 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:53:02 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@59d77850 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:53:02 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:53:02 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:53:02 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@10bea4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:53:02 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:53:02 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:53:02 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@7e2c64 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:53:03 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:53:03 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:53:03 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-03-07 20:53:03 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.157 seconds (process running for 3.936)
+2026-03-07 20:53:04 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:53:04 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mailru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd51-4deb-4f2a-b9a4-8e9b5f
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:53:04 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:53:27 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:53:27 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 31988 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:53:27 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:53:27 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:53:27 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:53:27 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@dc79225 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:53:27 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:53:27 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:53:27 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@644ded04 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:53:27 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:53:27 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:53:27 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@5292ceca uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:53:29 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:53:29 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:53:29 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-03-07 20:53:29 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.224 seconds (process running for 4.12)
+2026-03-07 20:53:29 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:53:29 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:55:42 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:55:42 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 14992 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:55:42 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:55:42 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:55:42 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:55:42 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@7899de11 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:55:42 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:55:42 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:55:42 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@78e22d35 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:55:42 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:55:42 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:55:42 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@2e8a1ab4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:55:43 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:55:43 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:55:43 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-03-07 20:55:43 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.214 seconds (process running for 4.126)
+2026-03-07 20:55:43 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:56:46 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:56:46 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 22432 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:56:46 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:56:46 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:56:46 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:56:46 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@7899de11 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:56:46 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:56:46 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:56:46 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@78e22d35 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:56:46 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:56:46 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:56:46 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@2e8a1ab4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:56:47 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:56:47 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:56:47 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-03-07 20:56:48 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.164 seconds (process running for 4.065)
+2026-03-07 20:56:48 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-07 20:57:48 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:57:48 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 33324 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:57:48 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:57:48 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:57:48 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:57:48 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@7899de11 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:57:48 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:57:48 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:57:48 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@78e22d35 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:57:48 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:57:48 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:57:48 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@2e8a1ab4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:57:50 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:57:50 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:57:50 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-03-07 20:57:50 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.151 seconds (process running for 4.122)
+2026-03-07 20:57:55 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:57:55 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 7216 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:57:55 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:57:55 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:57:55 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:57:55 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@7899de11 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:57:55 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:57:55 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:57:55 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@78e22d35 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:57:55 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:57:55 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:57:55 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@2e8a1ab4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:57:57 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:57:57 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:57:57 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-03-07 20:57:57 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.222 seconds (process running for 4.209)
+2026-03-07 20:58:17 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:58:17 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 34896 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:58:17 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:58:17 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:58:17 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:58:17 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@3ce53f6a uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:58:17 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:58:17 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:58:17 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@19962194 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:58:17 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:58:17 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:58:17 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@481e91b6 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:58:19 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:58:19 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:58:19 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-03-07 20:58:19 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.132 seconds (process running for 3.963)
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mailru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd51-4deb-4f2a-b9a4-8e9b5f
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:58:20 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:36 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-07 20:58:36 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 26836 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-07 20:58:36 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 20:58:36 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:58:36 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:58:36 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@3ce53f6a uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:58:36 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:58:36 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:58:36 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@19962194 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:58:36 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-07 20:58:36 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt. Will be trying the next url if available
+2026-03-07 20:58:36 WARN  o.s.c.c.c.ConfigServerConfigDataLoader - Could not locate PropertySource ([ConfigServerConfigDataResource@481e91b6 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: getsockopt
+2026-03-07 20:58:38 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-07 20:58:38 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-07 20:58:38 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-03-07 20:58:38 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.154 seconds (process running for 3.917)
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mailru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd51-4deb-4f2a-b9a4-8e9b5f
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-07 20:58:38 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:07:18 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-08 01:07:18 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 15704 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-08 01:07:18 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-08 01:07:18 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-08 01:07:18 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=user-service, profiles=[default], label=null, version=null, state=null
+2026-03-08 01:07:19 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-08 01:07:19 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-08 01:07:19 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2026-03-08 01:07:19 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.378 seconds (process running for 4.189)
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mailru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd51-4deb-4f2a-b9a4-8e9b5f
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-08 01:07:20 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:45:30 INFO  o.h.v.i.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-08 01:45:30 INFO  o.e.c.UserControllerTest - Starting UserControllerTest using Java 24.0.1 with PID 18356 (started by D E X I P A S in C:\Users\D E X I P A S\IdeaProjects\Aston\user-service_HW2\user-service)
+2026-03-08 01:45:30 INFO  o.e.c.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-08 01:45:30 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2026-03-08 01:45:30 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=user-service, profiles=[default], label=null, version=null, state=null
+2026-03-08 01:45:32 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-03-08 01:45:32 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-03-08 01:45:32 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-03-08 01:45:32 INFO  o.e.c.UserControllerTest - Started UserControllerTest in 3.323 seconds (process running for 4.076)
+2026-03-08 01:45:32 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mailru
+2026-03-08 01:45:32 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-08 01:45:32 INFO  o.e.u.s.UserServiceImp - Пользователь создан успешно: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Пользователь успешно удален: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd51-4deb-4f2a-b9a4-8e9b5f
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Пользователь успешно изменен: ID=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c, email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало удаления пользователя: id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало изменения пользователя: email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало создания пользователя: email=alesha@mail.ru
+2026-03-08 01:45:33 INFO  o.e.u.s.UserServiceImp - Начало поиска пользователя по id=dd514fb8-4deb-4f2a-b9a4-8e9b5f2db93c
