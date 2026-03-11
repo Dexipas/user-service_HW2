@@ -53,10 +53,16 @@ public class UserController {
                 : ResponseEntity.notFound().build();
     }
 
-    @GetMapping(path = "/{id}")
+    @GetMapping(path = "/id/{id}")
     @Operation(summary = "Получить пользователя по id", description = "Возвращает пользователя по его идентификатору")
     public EntityModel<UserDTO> findById(@Parameter(description = "Идентификатор пользователя") @PathVariable String id) {
         return userDTOAssembler.toModel(userService.findById(id));
+    }
+
+    @GetMapping(path = "/email/{email}")
+    @Operation(summary = "Получить пользователя по email", description = "Возвращает пользователя по его email адресу")
+    public EntityModel<UserDTO> findByEmail(@Parameter(description = "Email пользователя") @PathVariable String email) {
+        return userDTOAssembler.toModel(userService.findByEmail(email));
     }
 
     @GetMapping

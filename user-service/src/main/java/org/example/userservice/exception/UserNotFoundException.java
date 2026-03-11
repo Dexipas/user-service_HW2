@@ -9,4 +9,8 @@ public class UserNotFoundException extends ValidationException {
     public UserNotFoundException(UUID id) {
         super(String.format("Пользователь с id \"%s\" не найден", id));
     }
+    public UserNotFoundException(String email) {
+        super(String.format("Пользователь с email \"%s\" не найден", email));
+    }
+
 }

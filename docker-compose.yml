@@ -1,4 +1,81 @@
 services:                # Список всех "служб" (контейнеров) в проекте
+
+  config-server:
+    build:
+      context: ./config-server
+      dockerfile: Dockerfile
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    environment:
+      SPRING_PROFILES_ACTIVE: native
+      SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: "file:/config-repository/"
+    volumes:
+      - ./config-repository:/config-repository:ro
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:8888/actuator/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  gateway-server:
+    build:
+      context: ./gateway-server
+      dockerfile: Dockerfile
+    container_name: gateway-server
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://config-server:8888
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    depends_on:
+      config-server:
+        condition: service_started
+      discovery-server:
+        condition: service_healthy
+
+  discovery-server:
+    build:
+      context: ./discovery-server
+      dockerfile: Dockerfile
+    container_name: discovery-server
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://config-server:8888
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost:8761/actuator/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      config-server:
+        condition: service_healthy
+
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_CONFIG_IMPORT=configserver:http://config-server:8888
+      # Пишем СТРОГО ТАК (через точки):
+      - eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka/
+      - eureka.client.register-with-eureka=true
+      - eureka.client.fetch-registry=true
+    depends_on:
+      config-server:
+        condition: service_healthy
+      kafka:
+        condition: service_started
+      users-db:
+        condition: service_started
+      discovery-server:
+        condition: service_started
+
   users-db:                    # Техническое имя сервиса внутри Docker
     image: postgres:15   # Какой образ скачать из Docker Hub (готовая ОС с установленным Postgres)
     container_name: users-db # Имя, которое вы увидите в списке запущенных контейнеров
@@ -34,20 +111,25 @@ services:                # Список всех "служб" (контейне�
     container_name: kafka-kraft
     ports:
       - "9092:9092"
+      - "29092:29092"
     environment:
-      # Роли узла: он и контроллер (вместо Zookeeper), и брокер (хранит данные)
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: 'broker,controller'
-      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@localhost:9093'
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false" #Убираю автодобавление топиков
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:9093'
 
-      # Настройка слушателей
-      KAFKA_LISTENERS: 'PLAINTEXT://:9092,CONTROLLER://:9093'
-      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://localhost:9092'
+      # Настройка маппинга: связываем имена с протоколом PLAINTEXT
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT'
+
+      # Слушатели: где Kafka реально открывает порты
+      KAFKA_LISTENERS: 'INTERNAL://:9092,EXTERNAL://:29092,CONTROLLER://:9093'
+
+      # Рекламные адреса: что Kafka сообщает клиентам
+      KAFKA_ADVERTISED_LISTENERS: 'INTERNAL://kafka:9092,EXTERNAL://localhost:29092'
+
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT'
+      KAFKA_INTER_BROKER_LISTENER_NAME: 'INTERNAL'
 
-      # Генерация ID кластера (обязательно для KRaft)
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1

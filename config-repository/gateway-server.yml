@@ -1,0 +1,38 @@
+server:
+  port: 8080 # Гейтвей будет на главном порту
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # Разрешает искать сервисы через Эврику
+          lower-case-service-id: true
+      routes:
+        # Маршрут для User Service
+        - id: user-service
+          uri: lb://user-service # lb:// означает Load Balancer через Эврику
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user-service
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      userServiceCB:
+        slidingWindowSize: 10 # смотреть на последние 10 запросов
+        waitDurationInOpenState: 10s # ждать 10 секунд перед попыткой снова пустить трафик
+
+
+
+eureka:
+  client:
+    service-url:
+      fetch-registry: true
+      register-with-eureka: true
+      defaultZone: http://discovery-server:8761/eureka/

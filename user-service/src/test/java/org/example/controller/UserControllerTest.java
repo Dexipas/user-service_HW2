@@ -136,7 +136,7 @@ public class UserControllerTest {
 
         when(userService.findById(USER_ID.toString())).thenReturn(userDTO);
 
-        mockMvc.perform(get("/api/users/{id}", USER_ID))
+        mockMvc.perform(get("/api/users/id/{id}", USER_ID))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(USER_ID.toString()))
                 .andExpect(jsonPath("$.name").value(USER_NAME))
@@ -150,7 +150,7 @@ public class UserControllerTest {
 
         when(userService.findById(USER_ID.toString())).thenThrow(UserNotFoundException.class);
 
-        mockMvc.perform(get("/api/users/{id}",USER_ID))
+        mockMvc.perform(get("/api/users/id/{id}",USER_ID))
                 .andExpect(status().isNotFound());
     }
 

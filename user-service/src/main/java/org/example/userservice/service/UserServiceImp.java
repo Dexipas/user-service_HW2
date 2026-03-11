@@ -2,8 +2,8 @@ package org.example.userservice.service;
 
 
 import jakarta.transaction.Transactional;
-import org.example.events.UserCreatedEvent;
-import org.example.events.UserDeletedEvent;
+import org.example.userservice.events.UserCreatedEvent;
+import org.example.userservice.events.UserDeletedEvent;
 import org.example.userservice.dto.UserDTO;
 import org.example.userservice.mapper.UserMapper;
 import org.example.userservice.repository.UserRepository;
@@ -86,6 +86,14 @@ public class UserServiceImp implements UserService {
                 .orElseThrow(() -> new UserNotFoundException(uuid));
     }
 
+    @Override
+    public UserDTO findByEmail(String email) {
+        log.info("Начало поиска пользователя по email={}", email);
+        UserValidation.validateEmail(email);
+        Optional<User> userFound = userRepository.findByEmail(email);
+        return userFound.map(userMapper::toDTO)
+                .orElseThrow(() -> new UserNotFoundException(email));
+    }
 
     @Override
     public boolean deleteUser(String id) {
