@@ -1,0 +1,59 @@
+spring:
+  liquibase:
+    enabled: false
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/notifications_db
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  mail:
+    host: smtp.ethereal.email
+    port: 587
+    username: ${MAIL_USER}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+  eureka:
+    enabled: false
+
+  cloud:
+    config:
+      enabled: false  # отключает Config Server клиент
+      import-check:
+        enabled: false  # отключает проверку import
+
+  spring:
+    datasource:
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-service-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: latest
+      enable-auto-commit: false
+      properties:
+        spring.json.trusted.packages: "org.example.events"
+
+  cron:
+    expression: "*/30 * * * * ?"
+
+  server:
+    port: 8083

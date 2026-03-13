@@ -1,8 +1,4 @@
 spring:
-  datasource:
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-
   mail:
     username: ${MAIL_USER}
     password: ${MAIL_PASSWORD}
@@ -12,15 +8,17 @@ spring:
 
 
   kafka:
-    bootstrap-servers: localhost:29092
+    bootstrap-servers: kafka:9092
     consumer:
-      group-id: notification-service-group
+      group-id: notification-service-final
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
       auto-offset-reset: latest
       enable-auto-commit: false
       properties:
-        spring.json.trusted.packages: "org.example.events"
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+        spring.json.trusted.packages: "*"
+        spring.json.type.mapping: "userCreated:org.example.events.UserCreatedEvent,userDeleted:org.example.events.UserDeletedEvent"
 
 cron:
   expression: "*/30 * * * * ?"

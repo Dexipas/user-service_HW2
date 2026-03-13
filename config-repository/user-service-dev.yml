@@ -8,6 +8,7 @@ spring:
         acks: all # подтверждение от всех реплик
         retries: 5 # количество повторов при ошибке
         enable.idempotence: true # идемпотентность (для exactly-once)
+        spring.json.type.mapping: "userCreated:org.example.userservice.events.UserCreatedEvent,userDeleted:org.example.userservice.events.UserDeletedEvent"
   liquibase:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-user.yaml
